@@ -1,0 +1,50 @@
+:root {
+  --amplify-primary-color: #1890ff;
+  --amplify-primary-tint: #1890ff;
+  --amplify-primary-shade: #1161d0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+@import 'antd/dist/antd.css';
+
+// compponents
+@import 'components/mixins';
+@import 'components/variables';
+
+// utilities
+@import 'utilities/index';
+
+// custom lib
+@import 'custom-libs/modal';
+@import 'custom-libs/table';
+@import 'custom-libs/collapse';
+@import 'custom-libs/input';
+@import 'custom-libs/card';
+@import 'custom-libs/upload';
+@import 'custom-libs/checkbox';
+@import 'custom-libs/amplify';
+@import 'custom-libs/typography';
+@import 'custom-libs/select';
+@import 'custom-libs/datepicker';
+@import 'custom-libs/radiobox';
+
+// component
+@import 'components/extends';
+@import 'components/forms';
+@import 'components/button';
+
+// pages
+@import 'pages/layout';
+@import 'pages/login';
+@import 'pages/regulation-type';
+@import 'pages/task';
+@import 'pages/department';
+
+html {
+  font-size: $desktopBaseFontSize;
+
+  @include breakpoint(768px) {
+    font-size: $mobileBaseFontSize;
+  }
+}

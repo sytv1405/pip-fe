@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------
+// Horizontal align block
+// ----------------------------------------------------------------------
+// example: @include horizontal-align();
+
+@mixin horizontal-align {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin: auto;
+}
+
+@mixin horizontal-align-default {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin: auto;
+}

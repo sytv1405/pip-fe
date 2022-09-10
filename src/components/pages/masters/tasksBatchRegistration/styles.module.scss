@@ -1,0 +1,114 @@
+@import '@/assets/scss/components/variables';
+
+.guide-card {
+  padding: 20px;
+  background: $upload-container-bg;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: $text-color;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+
+  :global {
+    .ant-typography {
+      color: $text-color;
+    }
+    
+    .ant-btn {
+      color: $text-color;
+      font-size: 12px;
+      height: 28px;
+
+      &:hover {
+        color: $green;
+        border-color: $green;
+      }
+    }
+  }
+}
+
+.button-download-template {
+  display: inline-flex;
+  align-items: center;
+  color: $text-color;
+  text-decoration-color: $text-color !important;
+
+  &:hover, 
+  &:active,
+  &:focus {
+    color: $text-color;
+  }
+}
+
+.button-download-task {
+  display: flex;
+  align-items: center;
+}
+
+.search-department-container {
+  :global {
+    .ant-input-search {
+      border-radius: 99px;
+      border-color: $border-color;
+
+      &::placeholder {
+        color: $placeholder-color;
+      }
+
+      &-search-button {
+        border-top-right-radius: 99px !important;
+        border-bottom-right-radius: 99px !important;
+        border-left: 0;
+        border-color: $border-color;
+      }
+    }
+
+    svg {
+      fill: $green;
+    }
+
+    .ant-input-affix-wrapper {
+      border: 0 !important;
+      border-radius: 99px !important;
+      padding-right: 0;
+    }
+  }
+}
+
+.department-table {
+  :global {
+    .ant-table-cell {
+      border-color: $border-color;
+
+      &:first-child {
+        min-width: 60px;
+      }
+    }
+
+    .ant-table-cell + .ant-table-cell {
+      border-left: 1px solid $border-color;
+    }
+
+    .ant-table-thead {
+      .ant-table-cell {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: $table-header-bg;
+        color: $table-header-color;
+      }
+    }
+
+    .ant-table-tbody {
+      .ant-table-cell {
+        color: $text-color;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.button-open-upload-guide-modal {
+  display: inline-flex;
+  align-items: center;
+}

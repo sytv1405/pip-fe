@@ -1,0 +1,5 @@
+---
+- hosts: smt-dev-servers
+  gather_facts: true
+  roles:
+    - deploy

@@ -1,0 +1,15 @@
+.ant-typography {
+  color: $text-color !important;
+
+  &-danger {
+    color: $red !important;
+  }
+
+  &.color-red {
+    color: $danger !important;
+  }
+
+  strong {
+    font-weight: $fw-bold !important;
+  }
+}

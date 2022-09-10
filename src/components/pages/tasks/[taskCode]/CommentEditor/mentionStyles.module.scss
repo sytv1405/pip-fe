@@ -1,0 +1,67 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/truncate';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+$mention-item-focused-bg: #d5e3bd;
+
+
+.mention {
+  color: $green;
+}
+
+.mentionSuggestions {
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  position: absolute;
+  min-width: 150px;
+  max-width: 440px;
+  background: $white;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0);
+  max-height: 212px;
+  overflow: auto;
+
+  @include breakpoint(768px) {
+    width: 100%;
+    transform: none !important;
+    top: auto !important;
+    bottom: 100% !important;
+    margin-bottom: 4px;
+  }
+}
+
+.mentionSuggestionsEntryContainer {
+  display: table;
+  width: 100%;
+}
+
+.mentionSuggestionsEntryContainerLeft,
+.mentionSuggestionsEntryContainerRight {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mentionSuggestionsEntryContainerRight {
+  width: 100%;
+  padding-left: 8px;
+}
+
+.mentionSuggestionsEntry {
+  padding: 4px 10px 4px 10px;
+  color: $text-color;
+  @include truncate-one-line();
+}
+
+.mentionSuggestionsEntryFocused {
+  composes: mentionSuggestionsEntry;
+  background-color: $mention-item-focused-bg;
+  ;
+}
+
+.mentionSuggestionsEntryText,
+.mentionSuggestionsEntryTitle {
+  @include truncate-one-line()
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.984" height="27.332" viewBox="0 0 26.984 27.332">
+  <g id="Group_669" data-name="Group 669" transform="translate(-355.826 -1690.987)">
+    <g id="Path_532" data-name="Path 532" transform="translate(355.826 1690.987)" fill="#fff" stroke-linecap="round">
+      <path d="M 21.0793399810791 26.33233642578125 L 1 26.33233642578125 L 1 0.9999972581863403 L 21.0793399810791 0.9999972581863403 L 21.0793399810791 26.33233642578125 Z" stroke="none"/>
+      <path d="M 2 1.999998092651367 L 2 25.33233642578125 L 20.0793399810791 25.33233642578125 L 20.0793399810791 1.999998092651367 L 2 1.999998092651367 M 0 -1.9073486328125e-06 L 22.0793399810791 -1.9073486328125e-06 L 22.0793399810791 27.33233642578125 L 0 27.33233642578125 L 0 -1.9073486328125e-06 Z" stroke="none" fill="#333"/>
+    </g>
+    <path id="Path_520" data-name="Path 520" d="M-19575.727-17884.889h10.7" transform="translate(19937.242 19584.145)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_521" data-name="Path 521" d="M-19575.727-17884.889h10.7" transform="translate(19937.242 19588.689)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_522" data-name="Path 522" d="M-19575.727-17884.889h10.7" transform="translate(19937.242 19593.234)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_523" data-name="Path 523" d="M0,0V11.981l1.925,2.78,1.923-2.779V0Z" transform="translate(378.771 1701.342) rotate(47)" fill="#16962b" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

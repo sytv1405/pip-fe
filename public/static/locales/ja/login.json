@@ -1,0 +1,8 @@
+{
+  "title": "ログイン",
+  "username": "ID",
+  "password": "パスワード",
+  "placeholder_username": "foo@example.com",
+  "placeholder_password": "パスワードを入力",
+  "error_requried_field_max_65": "[% item_name%]は最大65文字まで入力してください"
+}

@@ -1,0 +1,107 @@
+.ant-modal {
+  position: relative;
+
+  .ant-modal-header {
+    border-radius: 5px 5px 0 0 !important;
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 24px;
+  }
+
+  .ant-modal-body {
+    color: $text-color !important;
+  }
+
+  .ant-modal-footer {
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    padding-bottom: 32px !important;
+
+    .ant-btn {
+      border-radius: 32px;
+    }
+  }
+
+  .ant-modal-title {
+    font-size: rem(20px);
+    font-weight: $fw-bold;
+    color: $text-color;
+  }
+
+  .ant-modal-content {
+    border-radius: 5px;
+  }
+
+  .ant-modal-close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $modal-close-border-color;
+    border-radius: 99px;
+    top: -12px !important;
+    right: -12px !important;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background-color: $modal-close-color;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &-x {
+      display: none;
+    }
+  }
+
+  @include breakpoint(768px) {
+    max-width: calc(100% - 36px) !important;
+  }
+
+  @for $i from 0 through 150 {
+    &.modal-pd-#{$i} {
+      .ant-modal-header {
+        padding: #{$i}px #{$i}px 0;
+      }
+
+      .ant-modal-body {
+        padding: 0 #{$i}px #{$i}px;
+      }
+
+      .ant-modal-footer {
+        padding-bottom: #{$i}px !important;
+      }
+    }
+  }
+}
+
+.ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.modal-footer-center {
+  .ant-modal-footer {
+    padding-bottom: rem(20px);
+    padding-top: rem(20px);
+    text-align: center;
+  }
+}
+
+.modal-task-bulk-update {
+  & .ant-card-body {
+    padding-bottom: 12px !important;
+  }
+}

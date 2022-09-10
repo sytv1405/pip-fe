@@ -1,0 +1,116 @@
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+@import '@/assets/scss/components/variables';
+
+.business-task-major {
+  &:not(:first-of-type) {
+    border-top: 1px solid $border-color;
+    padding-top: 30px;
+  }
+
+  .business-task-middle {
+    margin-bottom: 30px;
+  }
+
+  .business-title {
+    font-size: rem(24px);
+    color: $text-color;
+    font-weight: $fw-bold;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  .tasks-title {
+    font-size: rem(18px);
+    color: $text-color;
+    font-weight: $fw-bold;
+    line-height: 27px;
+  }
+}
+
+.favorite-checkbox {
+  span:last-child {
+    padding-right: 0 !important;
+  }
+
+  :global {
+    .ant-checkbox-inner {
+      border-color: #bcbcbc;
+    }
+  }
+}
+
+.business-select-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+
+  :global {
+    label {
+      font-size: rem(14px) !important;
+    }
+  }
+}
+
+.business-select {
+  width: rem(280px);
+
+  @include breakpoint(768px) {
+    width: 100%;
+  }
+}
+
+.mobile-padding {
+  @include breakpoint(768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.switch-container {
+  display: flex;
+  margin-bottom: 17px;
+
+  .switch-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 40px;
+    background: $white;
+    border: 2px solid $submenu-active-bg;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-size: rem(16px);
+    line-height: 24px;
+    color: $text-color;
+    position: relative;
+
+    @include breakpoint(768px) {
+      flex: 0 0 calc(50% - 5px);
+      min-width: unset;
+    }
+
+    &.active {
+      background: $submenu-active-bg;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 38px;
+        width: 0;
+        height: 0;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-top: 9px solid $submenu-active-bg;
+        clear: both;
+      }
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}

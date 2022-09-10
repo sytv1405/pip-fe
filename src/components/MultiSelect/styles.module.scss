@@ -1,0 +1,50 @@
+@import '@/assets/scss/components/_variables.scss';
+
+.select {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 0;
+
+  &--disabled {
+    background-color: #d9d9d9;
+  }
+
+  &__input_wrapper {
+    padding: 5px 10px;
+
+    :global {
+      & .ant-input-affix-wrapper {
+        border-radius: 5px !important;
+      }
+
+      & .ant-input-suffix {
+        svg {
+          width: 13.36px;
+          height: 14.27px;
+        }
+      }
+    }
+  }
+
+  &__list {
+    flex: 1;
+    overflow: auto;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 4px 15px;
+    height: 30px;
+    color: $text-color;
+
+    &--selected {
+      background-color: $submenu-active-bg;
+    }
+  }
+}

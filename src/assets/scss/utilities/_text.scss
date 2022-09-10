@@ -1,0 +1,83 @@
+/*
+* Text utilites
+*/
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-pre-line {
+  white-space: pre-line !important;
+}
+
+.font-weight-bold {
+  font-weight: $fw-bold !important;
+}
+
+.font-weight-medium {
+  font-weight: $fw-medium !important;
+}
+
+.font-weight-normal {
+  font-weight: $fw-normal !important;
+}
+
+.text-wrap {
+  word-break: break-word;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-break-space {
+  white-space: break-spaces !important;
+}
+
+.text-common {
+  color: $text-color !important;
+}
+
+.text-gray-small {
+  color: $table-header-color !important;
+}
+
+.text-normal {
+  font-size: rem(16px) !important;
+}
+
+.text-minimum {
+  font-size: rem(12px) !important;
+}
+
+.text-large {
+  font-size: rem(18px) !important;
+}
+
+.text-regular {
+  font-size: rem(14px) !important;
+}
+
+.text-secondary {
+  color: $text-color !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $fw-bold !important;
+}

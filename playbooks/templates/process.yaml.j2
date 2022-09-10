@@ -1,0 +1,5 @@
+apps:
+  - script: server.js            # Application's startup file name
+    name: "fe-{{ env }}"
+    instances: {{ num_instance }}                   # Number of processes that must run in parallel, you can change this if you want
+    exec_mode: fork

@@ -1,0 +1,38 @@
+@import '@/assets/scss/components/variables';
+
+.description {
+  color: $text-color;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px !important;
+
+  &--small {
+    font-size: 12px;
+  }
+}
+
+.link-go-back {
+  color: $text-color !important;
+  font-size: 12px;
+
+  path {
+    stroke: $icon-color;
+  }
+}
+
+.narrow-field {
+  :global {
+    .ant-input {
+      width: 300px;
+    }
+  
+    .ant-select {
+      width: 300px;
+    }
+  }
+}
+
+.mw-222px {
+  width: 100%;
+  max-width: 222px !important;
+}

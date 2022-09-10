@@ -1,0 +1,196 @@
+.top-logo {
+  background-image: url('/logo_yarukoto_168x32.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  height: 28px;
+  margin: 0 40px;
+  overflow: hidden;
+  text-indent: -1985px;
+
+  @include breakpoint(768px) {
+    height: 32px;
+    margin: 0;
+  }
+}
+.logo {
+  background-image: url('/logo_yarukoto_168x32.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: rem(32px);
+  margin: rem(16px);
+  overflow: hidden;
+  text-indent: -1985px;
+  width: rem(168px);
+}
+
+.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.border {
+  border: 1px solid $border-color;
+}
+
+.d-flex {
+  @include flexbox;
+}
+.d-inline-flex {
+  @include inline-flex;
+}
+.align-items-center {
+  @include align-items(center);
+}
+.align-items-end {
+  @include align-items(flex-end);
+}
+.justify-content-start {
+  @include justify-content(flex-start);
+}
+.justify-content-end {
+  @include justify-content(flex-end);
+}
+.justify-content-between {
+  @include justify-content(space-between);
+}
+
+.justify-content-between {
+  @include justify-content(space-between);
+}
+
+.flex-center {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.flex-center-between {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+.flex-column {
+  @include flexbox;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.link-underline {
+  text-decoration: underline !important;
+  color: $text-color;
+
+  &.ant-btn-link {
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    color: $text-color;
+
+    span {
+      text-decoration: none !important;
+    }
+  }
+}
+
+a.link-default,
+.link-default {
+  color: $gray-700 !important;
+
+  &:hover {
+    color: $primary !important;
+  }
+}
+.card-p-0 {
+  .ant-card-body {
+    padding: 0;
+  }
+}
+.ant-card-bordered {
+  border-color: $border-color !important;
+}
+.card-top {
+  background-color: $gray-light-100;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray-200 {
+  background-color: $gray-light-200;
+}
+
+.bg-gray-250 {
+  background-color: $gray-250;
+}
+
+.custom-status {
+  position: fixed;
+  top: 45%;
+  left: 0px;
+  right: 0px;
+  padding: 0 !important;
+  z-index: 1000;
+
+  .ant-message-notice-content {
+    width: 100%;
+    padding: 0;
+    color: $white;
+    font-size: rem(20px);
+    font-weight: bold;
+
+    .ant-message-custom-content {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.ant-message-success {
+        background: $green;
+      }
+      &.ant-message-error {
+        background: $red;
+      }
+    }
+  }
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: $notification-bg;
+  border-radius: 99px;
+  cursor: pointer;
+  position: relative;
+
+  &-count {
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    padding: 3px 6px;
+    border-radius: 99px;
+    background-color: $red;
+    line-height: 1;
+    font-size: 10px;
+    color: $white;
+    font-weight: $fw-bold;
+  }
+  &:hover,
+  &.ant-dropdown-open {
+    background-color: $green;
+  }
+}

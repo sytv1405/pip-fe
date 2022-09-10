@@ -1,0 +1,128 @@
+@import '@/assets/scss/components/variables';
+
+$tableBorderRadius: 5px;
+$childBorderRadius: 4px;
+
+.business-unit-container {
+  border: 1px solid $border-color;
+  border-radius: $tableBorderRadius;
+}
+.businees-unit-search {
+  width: 100%;
+  tr,
+  td {
+    vertical-align: top;
+    text-align: left !important;
+    font-size: 12px;
+  }
+  td {
+    padding: 8px;
+  }
+
+  .gray-row {
+    background: $gray-250;
+  }
+  .cell-underline {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.result {
+  &__title {
+    padding: 4px 8px;
+  }
+}
+.task {
+  &__title {
+    word-break: break-word;
+    padding: 5px 5px 5px 0;
+  }
+}
+.task-business-unit {
+  align-items: baseline !important;
+  padding-left: 3px;
+
+  & > svg {
+    flex: 0 0 8px !important;
+  }
+
+  & > span:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.business-table-thead {
+  & > tr > td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    display: none;
+  }
+
+  & > tr > td {
+    background-color: $table-header-bg;
+    color: $table-header-color;
+    font-size: 11px;
+    font-weight: $fw-bold;
+    &:hover {
+      background-color: $table-header-bg;
+    }
+
+    & .title-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  tr:first-child {
+    td:first-child {
+      border-top-left-radius: $childBorderRadius !important;
+    }
+    td:last-child {
+      border-top-right-radius: $childBorderRadius !important;
+    }
+  }
+}
+
+.business-table-tbody {
+  & > tr > td {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: $text-color;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+
+    & > tr:first-child {
+      background-color: $table-header-color;
+    }
+  }
+}
+
+.cell-task-search {
+  position: relative;
+
+  & .gap-cell-left {
+    padding: 5px 3px;
+  }
+
+  & .line-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 93%;
+
+    & .divide-line {
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+
+  &:first-child {
+    & .line-bottom {
+      width: 90%;
+    }
+  }
+}
+
+.btn-show-child:hover {
+  cursor: pointer;
+}

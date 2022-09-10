@@ -1,0 +1,52 @@
+.icon-button {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ant-btn {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  color: $text-color !important;
+
+  &:not(.ant-input-search-button) {
+    border-radius: 24px !important;
+  }
+
+  &:not(.ant-btn-text):not(.ant-btn-link):not(.ant-input-search-button):not(:disabled) {
+    &:hover,
+    &:focus {
+      border-color: $green !important;
+    }
+  }
+
+  &.ant-btn-primary {
+    background-color: $green;
+    border-color: $green;
+    color: $white !important;
+
+    &:hover,
+    &:focus {
+      color: $white !important;
+      background-color: $green;
+      border-color: $green;
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: $green;
+    }
+
+    &:disabled {
+      color: #00000040 !important;
+      border-color: $border-color !important;
+      background: $gray-200 !important;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &-lg {
+    border-width: 2px !important;
+  }
+}

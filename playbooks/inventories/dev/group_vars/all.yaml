@@ -1,0 +1,20 @@
+---
+env: "dev"
+git_repo: "git@bitbucket.org:nal-solutions/smt-shift-seven-management-tool-fe.git"
+branch: "dev"
+repos: "smt-shift-seven-management-tool-fe"
+username: "dev"
+user_home_folder: "/home/{{ username }}"
+num_instance: "1"
+
+environments:
+  NEXT_PUBLIC_FRONT_BASE_URL: "https://smt.dev.nals.vn/"
+  NEXT_PUBLIC_API_BASE_URL: "https://smt-api.dev.nals.vn/api/v1"
+  NEXT_PUBLIC_S3_BASE_URL: ""
+  NEXT_PUBLIC_AWS_REGION: "ap-northeast-1"
+  NEXT_PUBLIC_COGNITO_IDENTITY_POOL_ID: "ap-northeast-1:27b0a330-1316-462e-82e5-d94b7544a641"
+  NEXT_PUBLIC_COGNITO_USER_POOL_ID: "ap-northeast-1_k4J0bOx4M"
+  NEXT_PUBLIC_COGNITO_WEB_CLIENT_ID: "7ble4lbs6r2723gcahodt11j7r"
+  NEXT_PUBLIC_S3_BUCKET: ""
+  NEXT_PUBLIC_ENV: ""
+  PORT: "3000"

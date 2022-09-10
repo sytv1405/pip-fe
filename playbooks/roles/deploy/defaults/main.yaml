@@ -1,0 +1,2 @@
+---
+application_path: "/home/dev/{{ env }}/{{ repos }}"

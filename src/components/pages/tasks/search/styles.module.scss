@@ -1,0 +1,249 @@
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+@import '@/assets/scss/components/variables';
+
+.ssc-datepicker {
+  height: 38px !important;
+  width: 100% !important;
+
+  & :global {
+    .ant-picker-clear {
+      right: 20px;
+    }
+
+    .ant-picker-suffix {
+      svg {
+        min-width: 17px;
+      }
+    }
+  }
+}
+
+.bulk-action-btn {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  justify-content: space-around;
+
+  > svg {
+    order: 1;
+  }
+}
+
+.control-item-title,
+.number-of-tasks {
+  font-size: rem(16px);
+}
+
+.filter-title {
+  svg {
+    width: 20px;
+    height: 19px;
+  }
+}
+
+.result-title {
+  svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.task-search-table {
+  & :local(.column-task-code) {
+    font-size: rem(14px);
+  }
+
+  & :local(.column-department-name) {
+    min-width: 100px;
+    font-size: rem(12px);
+  }
+
+  & :local(.column-category) {
+    color: $table-header-color !important;
+    font-size: rem(10px);
+
+    svg {
+      min-width: 7px;
+    }
+
+    @include breakpoint(768px) {
+      min-width: 120px;
+    }
+  }
+
+  & :local(.column-task-name) {
+    font-size: rem(13px);
+
+    @include breakpoint(768px) {
+      min-width: 180px;
+    }
+  }
+
+  & :local(.column-task-deadline) {
+    font-size: rem(12px);
+  }
+
+  & :global {
+    .ant-table-thead {
+      height: 46px;
+
+      @include breakpoint(768px) {
+        height: unset;
+      }
+
+      & > tr > th {
+        @include breakpoint(768px) {
+          padding-top: 6px !important;
+          padding-bottom: 6px !important;
+
+          .sort-icon {
+            gap: unset !important;
+            grid-gap: unset !important;
+
+            svg {
+              width: 6px !important;
+              min-height: 4px !important;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          padding-left: 4px !important;
+        }
+        &:nth-child(3) {
+          padding-left: 2px !important;
+        }
+      }
+    }
+    .ant-table-tbody {
+      & > tr > td {
+        border-bottom: 2px solid $white !important;
+
+        &:nth-child(2) {
+          padding-left: 4px !important;
+        }
+        &:nth-child(3) {
+          padding-left: 2px !important;
+        }
+      }
+    }
+  }
+}
+
+.search-collapse {
+  background-color: $gray-250;
+
+  :global {
+    .ant-collapse-item {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &.ant-collapse-item-active {
+        padding: 0 20px;
+
+        .ant-collapse-content-box {
+          padding: 20px 0;
+          border-bottom: 1px solid $border-color;
+
+          .ant-picker {
+            width: 100% !important;
+          }
+        }
+      }
+
+      .ant-form-item {
+        margin-bottom: 20px;
+      }
+
+      .ant-form-item-control-input-content {
+        background-color: transparent !important;
+      }
+
+      .ant-collapse-header {
+        border: none;
+        font-size: rem(16px);
+
+        @include breakpoint(768px) {
+          flex-direction: row;
+        }
+      }
+
+      .anticon {
+        position: unset;
+
+        svg {
+          fill: currentColor;
+        }
+      }
+
+      .ant-picker-clear {
+        right: 20px;
+      }
+    }
+  }
+}
+
+.section-title {
+  @include breakpoint(768px) {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    :global {
+      h3 {
+        font-size: 20px !important;
+      }
+
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+.form-item-keyword {
+  & :global {
+    .ant-form-item-label {
+      padding-bottom: 6px;
+    }
+
+    .ant-input-affix-wrapper {
+      height: 38px;
+    }
+  }
+}
+
+.department-select {
+  height: 152px;
+
+  & :global {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.period-type-checkbox {
+  & :global {
+    .ant-checkbox-disabled + span {
+      color: $text-color !important;
+    }
+  }
+}
+
+.col-datepicker {
+  @include breakpoint(768px) {
+    flex: 0 0 100% !important;
+  }
+}
+
+.form-search-task {
+  :global {
+    .ant-select {
+      .ant-select-selector {
+        padding: 4px 0 !important;
+      }
+    }
+  }
+}

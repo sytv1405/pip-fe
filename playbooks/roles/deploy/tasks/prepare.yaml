@@ -1,0 +1,14 @@
+---
+- name: Ansible check app directory exists.
+  stat:
+    path: "{{ application_path }}"
+  register: check_app_dir
+
+- name: Create app directory if non exists
+  file:
+    path: "{{ application_path }}"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0755
+  when: not check_app_dir.stat.exists

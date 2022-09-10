@@ -1,0 +1,19 @@
+.radio-color-green {
+  .ant-radio:hover .ant-radio-inner {
+    border-color: $green !important;
+  }
+
+  .ant-radio-checked {
+    .ant-radio-inner {
+      border-color: $green !important;
+
+      &::after {
+        background-color: $green !important;
+      }
+    }
+  }
+
+  span:last-child {
+    color: $text-color;
+  }
+}

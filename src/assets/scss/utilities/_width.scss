@@ -1,0 +1,65 @@
+.w-auto {
+  width: auto !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.mn-w90p {
+  min-width: rem(90px) !important;
+}
+
+.mn-w125p {
+  min-width: rem(125px) !important;
+}
+
+.mn-w130p {
+  min-width: rem(130px) !important;
+}
+
+.mn-w150p {
+  min-width: rem(150px) !important;
+}
+
+.mn-w170p {
+  min-width: rem(170px) !important;
+}
+
+.mn-w180p {
+  min-width: rem(180px) !important;
+}
+
+.mn-w200p {
+  min-width: rem(200px) !important;
+}
+
+@for $i from 0 through 200 {
+  .width-px-#{$i * 5} {
+    width: #{$i * 5}px !important;
+  }
+
+  .min-width-px-#{$i * 5} {
+    min-width: #{$i * 5}px !important;
+  }
+
+  .max-width-#{$i * 5} {
+    max-width: #{$i * 5}px !important;
+  }
+}

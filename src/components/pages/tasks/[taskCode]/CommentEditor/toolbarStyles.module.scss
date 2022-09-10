@@ -1,0 +1,10 @@
+$editor-tool-bar-bg: #e3e2d9;
+
+.toolbar {
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: $editor-tool-bar-bg;
+  border-radius: 0 0 4px 4px;
+}

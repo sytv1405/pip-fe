@@ -1,0 +1,22 @@
+.ant-card {
+  border-radius: 5px !important;
+
+  &-body {
+    padding: 30px 36px !important;
+    width: 100%;
+
+    @include breakpoint(768px) {
+      padding: 30px 20px !important;
+    }
+  }
+
+  &-small {
+    .ant-card-body {
+      padding: 12px !important;
+    }
+  }
+
+  &.border-none {
+    border: 0 !important;
+  }
+}

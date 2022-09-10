@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <circle id="Ellipse_127" data-name="Ellipse 127" cx="13" cy="13" r="13" fill="#8d8d8d"/>
+  <g id="Group_669" data-name="Group 669" transform="translate(-348 -1684)">
+    <g id="Rectangle_728" data-name="Rectangle 728" transform="translate(355.826 1690.987)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <rect width="10.512" height="13.013" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9.512" height="12.013" fill="none"/>
+    </g>
+    <path id="Path_520" data-name="Path 520" d="M-19575.729-17884.889h5.094" transform="translate(19934.264 19579.813)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_521" data-name="Path 521" d="M-19575.729-17884.889h5.094" transform="translate(19934.264 19581.977)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_522" data-name="Path 522" d="M-19575.729-17884.889h5.094" transform="translate(19934.264 19584.141)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_523" data-name="Path 523" d="M0,0V5.7L.917,7.027,1.833,5.7V0Z" transform="translate(366.75 1695.917) rotate(47)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

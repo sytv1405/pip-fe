@@ -1,0 +1,37 @@
+.ant-picker {
+  border-radius: 5px !important;
+
+  &:focus,
+  &:hover {
+    border-color: $green !important;
+    box-shadow: none !important;
+  }
+
+  &-large {
+    height: 38px !important;
+
+    .ant-picker-input  {
+      input {
+        font-size: rem(14px) !important;
+
+        @include breakpoint(768px) {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+
+  .ant-picker-input {
+    input {
+      color: $text-color;
+
+      @include breakpoint(768px) {
+        font-size: 16px !important;
+      }
+    }
+  }
+
+  &-clear {
+    right: 22px !important;
+  }
+}

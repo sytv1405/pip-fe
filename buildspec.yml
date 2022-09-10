@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Node 16...
+      - apt-get update
+      - apt-get install -y nodejs
+      - n 16
+      - apt-get purge -y nodejs
+      - node -v
+      - echo Installing Yarn...
+      - npm install -g yarn
+      - npm -v
+      - node -v
+      - yarn -v
+
+  pre_build:
+    commands:
+      - |
+        FILE_PATH=$CODEBUILD_SRC_DIR/.env
+        aws ssm get-parameter --with-decryption --name '/pip-demo/'$ENV'/frontend/env_file' --region ap-northeast-1 --query Parameter.Value | sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\//g' > .env
+        cat $FILE_PATH
+        cd $CODEBUILD_SRC_DIR
+        echo Installing dependencies in handoff-fe...
+        yarn install
+  build:
+    commands:
+      - echo Building...
+      - cd $CODEBUILD_SRC_DIR
+      - yarn build
+artifacts:
+  files:
+    - '**/*'
+  base-directory: $CODEBUILD_SRC_DIR/out

@@ -1,0 +1,62 @@
+@import '@/assets/scss/components/variables';
+
+.back-select-page {
+  padding: 0 !important;
+  margin-bottom: 26px !important;
+  color: $text-color !important;
+  font-size: 12px !important;
+
+  path {
+    fill: $green;
+  }
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.btn-select-update {
+  width: 257px;
+  display: flex;
+  align-items: center;
+
+  span:first-child {
+    margin-left: 8px;
+  }
+
+  & > svg {
+    margin-left: 8px;
+    margin-top: 3px;
+  }
+}
+
+.color-icon-arrowRight {
+  span:first-child {
+    path {
+      fill: $green;
+    }
+  }
+}
+
+.text {
+  &-bulk-update-title {
+    font-size: 24px !important;
+  }
+
+  &-dealine,
+  &-department {
+    font-size: 12px !important;
+  }
+
+  &-majorCategory {
+    font-size: 10px !important;
+  }
+
+  &-title-code {
+    font-size: 13px !important;
+  }
+}
+
+.text-majorCategory {
+  color: $table-header-color !important;
+}

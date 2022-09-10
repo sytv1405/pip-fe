@@ -1,0 +1,215 @@
+$tableHeaderBrownColor: #e3e2d9;
+$tableBodyBrownColor: #efefe9;
+$tableBodyWhiteColor: $white;
+$tableBorderRadius: 5px;
+$tableTextHeaderGrayColor: #6f6f6f;
+$tableRowBorderBottomGrayColor: #d9d9d9;
+$tableRowBorderBottomWhiteColor: $white;
+
+.table-header-center {
+  .ant-table {
+    thead {
+      td,
+      th {
+        text-align: center;
+      }
+    }
+  }
+
+  &.nowrap {
+    .ant-table {
+      thead {
+        td,
+        th {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.truncate-three-line {
+  @include truncate-multiline(3);
+}
+
+.truncate-one-line {
+  @include truncate-multiline(1);
+}
+
+.ssc-table {
+  table {
+    color: $text-color;
+  }
+
+  &.custom-sort-icon {
+    & .ant-table-column-sorter {
+      display: none;
+    }
+  }
+
+  &.cursor-pointer {
+    & .ant-table-tbody {
+      tr {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ant-table-thead {
+    & > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+      display: none;
+    }
+
+    & > tr > th {
+      font-size: 11px;
+      font-weight: $fw-bold;
+      color: $tableTextHeaderGrayColor;
+      padding: 15px 16px !important;
+
+      & .title-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &.active {
+          .text {
+            color: $transaction-status-doing-color;
+          }
+
+          & .ascending-active,
+          .descending-active {
+            path {
+              stroke: $transaction-status-doing-color;
+            }
+          }
+        }
+
+        & .sort-icon {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+
+          svg {
+            &:nth-child(2) {
+              margin-bottom: -2px;
+            }
+          }
+        }
+      }
+    }
+
+    tr:first-child {
+      th:first-child {
+        border-top-left-radius: $tableBorderRadius !important;
+      }
+      th:last-child {
+        border-top-right-radius: $tableBorderRadius !important;
+      }
+    }
+  }
+
+  &.ssc-table-brown {
+    .ant-table-thead {
+      & > tr > th {
+        background-color: $tableHeaderBrownColor;
+      }
+    }
+
+    .ant-table-tbody {
+      & > tr:last-child {
+        td:first-child {
+          border-bottom-left-radius: $tableBorderRadius !important;
+        }
+        td:last-child {
+          border-bottom-right-radius: $tableBorderRadius !important;
+        }
+      }
+
+      & > tr > td {
+        background-color: $tableBodyBrownColor;
+        border-bottom: 2px solid $tableRowBorderBottomWhiteColor;
+        padding: 10px 16px !important;
+      }
+
+      .ant-table-row-selected {
+        > td {
+          background: $tableBodyBrownColor !important;
+        }
+
+        &:hover {
+          > td {
+            background: $table-row-hover-bg !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.ssc-table-white {
+    .ant-table-thead {
+      & > tr > th {
+        background-color: $tableHeaderBrownColor;
+      }
+    }
+
+    .ant-table-tbody {
+      & > tr > td {
+        background-color: $tableBodyWhiteColor;
+        border-bottom: 1px solid $tableRowBorderBottomGrayColor;
+      }
+    }
+
+    &.separate-first-column {
+      & .ant-table-thead {
+        & > tr > th:first-child {
+          border-right: 1px solid $tableRowBorderBottomGrayColor !important;
+        }
+      }
+
+      & .ant-table-tbody {
+        & > tr > td:first-child {
+          border-right: 1px solid $tableRowBorderBottomGrayColor !important;
+        }
+      }
+    }
+  }
+}
+
+.ant-table {
+  &-content {
+    overflow: auto;
+  }
+
+  &-tbody {
+    > .ant-table-row-selected {
+      > td {
+        background: transparent !important;
+        border-color: $border-color !important;
+      }
+
+      &:hover {
+        > td {
+          background: $table-row-hover-bg !important;
+        }
+      }
+    }
+  }
+
+  .ant-checkbox-indeterminate {
+    .ant-checkbox-inner {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.ssc-table-tasks {
+  .ant-table-tbody {
+    .ant-table-row {
+      .ant-table-cell:last-child > div {
+        padding-left: 3px;
+      }
+    }
+  }
+}

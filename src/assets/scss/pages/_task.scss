@@ -1,0 +1,39 @@
+.task-container {
+  .basic-type {
+    display: flex !important;
+    flex-direction: column;
+
+    @include breakpoint(768px) {
+      margin-top: 17px;
+    }
+
+    label {
+      margin-top: 0.5rem;
+      margin-left: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .nodata-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $border-color;
+    padding: 30px 0;
+
+    &__text {
+      white-space: pre-line;
+      text-align: center;
+    }
+  }
+}
+
+.btn-next-month {
+  svg {
+    font-size: 18px;
+    color: $black;
+  }
+}

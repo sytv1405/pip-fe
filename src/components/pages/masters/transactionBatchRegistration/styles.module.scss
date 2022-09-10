@@ -1,0 +1,209 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+
+.card-component {
+  margin-top: 20px;
+
+  .header-container {
+    padding: 22px 21px;
+    background-color: $gray-250;
+    border-radius: 5px;
+  }
+
+  .person-in-charge {
+    font-size: rem(20px);
+  }
+
+  .collapse-container {
+    margin-top: 15px;
+    & > div > div:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > div {
+        flex-grow: 1;
+      }
+
+      & > svg {
+        order: 1;
+        margin-right: 0 !important;
+      }
+    }
+
+    & > div > div:last-child {
+      & > div {
+        padding-top: 0 !important;
+      }
+    }
+
+    .title-sub-collapse {
+      font-size: rem(14px);
+      color: $gray-text;
+      font-weight: $fw-normal;
+
+      & > span:nth-child(2) {
+        padding-bottom: 3px;
+      }
+    }
+
+    .title-main-collapse {
+      font-size: rem(18px);
+      color: $text-color;
+    }
+
+    .collapse-body {
+      & > .border-collapse {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+
+  .custom-select {
+    min-width: 300px;
+
+    & > span > span {
+      position: relative !important;
+      top: 0 !important;
+      right: 0 !important;
+    }
+  }
+
+  .btn-selected-task {
+    font-size: rem(14px);
+  }
+
+  .transaction-table {
+    margin-bottom: 15px;
+    .title-column {
+      font-size: rem(11px);
+    }
+
+    :global {
+      .ant-table-cell {
+        border-color: $white !important;
+        padding: 10px;
+
+        &:first-child {
+          min-width: 55px;
+        }
+      }
+
+      .ant-table-cell + .ant-table-cell {
+        border-left: 1px solid $white;
+      }
+
+      .ant-table-thead {
+        .ant-table-cell {
+          padding-top: 8px;
+          padding-bottom: 8px;
+          background-color: $table-header-bg;
+          color: $table-header-color;
+        }
+
+        & > tr:first-child {
+          & > th:first-child {
+            border-top-left-radius: 5px !important;
+          }
+          & > th:last-child {
+            border-top-right-radius: 5px !important;
+          }
+        }
+      }
+
+      .ant-table-tbody {
+        background-color: $gray-250;
+
+        .ant-table-cell {
+          color: $text-color;
+          font-size: 16px;
+        }
+
+        .ant-table-row:last-child {
+          .ant-table-cell {
+            border-bottom: 0;
+          }
+        }
+
+        & > tr:last-child {
+          & > td:first-child {
+            border-bottom-left-radius: 5px !important;
+          }
+          & > td:last-child {
+            border-bottom-right-radius: 5px !important;
+          }
+        }
+      }
+    }
+
+    .column-task {
+      & .task-name {
+        font-size: rem(14px);
+      }
+
+      & .task-name__no_basisType {
+        padding-left: 16px !important;
+      }
+
+      &__infor {
+        font-size: rem(14px);
+
+        & > div:last-child {
+          margin-left: 25px;
+          font-size: rem(10px);
+          color: $gray-text !important;
+        }
+      }
+
+      &__datetime {
+        padding: 1px 9px;
+        color: $white;
+        font-size: rem(12px);
+        border-radius: 5px;
+        font-weight: $fw-medium;
+        background-color: $placeholder-color;
+      }
+    }
+  }
+}
+
+.three-dots {
+  margin-bottom: 0;
+  padding: 0 2px;
+  height: 30px;
+}
+
+.content-modal {
+  font-size: rem(16px) !important;
+}
+
+.btn-confirm-done-transaction {
+  border: 0;
+}
+
+.select-assignee,
+.select-department {
+  padding: 0 !important;
+
+  :global {
+    .ant-select-item-option {
+      &-active {
+        background-color: #d5e3bd !important;
+      }
+    }
+  }
+}
+
+.modal-confirm-transaction {
+  :global {
+    .ant-modal-body {
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
+    .ant-modal-footer {
+      padding-bottom: 24px !important;
+    }
+  }
+}

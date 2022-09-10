@@ -1,0 +1,182 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.ssc--home--todo--list {
+  :global {
+    .ssc-table {
+      .ant-table-thead {
+        tr:first-child {
+          th:first-child {
+            width: 80px;
+          }
+          th:nth-child(2) {
+            padding: 0 !important;
+            padding-left: 36px !important;
+          }
+          th:nth-child(3) {
+            width: 164px;
+          }
+          th:nth-child(4) {
+            width: 164px;
+          }
+
+          @include breakpoint(768px) {
+            th:first-child {
+              width: unset;
+              padding-left: 54px !important;
+            }
+            th:nth-child(2) {
+              width: 55px;
+              padding: 0 15px 0px 0px !important;
+            }
+          }
+        }
+      }
+
+      .ant-table-tbody {
+        & > tr > td {
+          font-size: rem(12px);
+          border-bottom: 2px solid $white !important;
+          padding-top: 14px !important;
+          padding-bottom: 14px !important;
+
+          @include breakpoint(768px) {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+
+          &:first-child {
+            @include breakpoint(768px) {
+              padding-right: 10px !important;
+            }
+          }
+
+          &:nth-child(2) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            @include breakpoint(768px) {
+              padding-right: 16px !important;
+            }
+          }
+        }
+
+        & .status-box {
+          & .text {
+            margin: 0;
+            color: $white;
+            min-width: 80px;
+            max-width: 84px;
+            border-radius: 7px;
+            padding: 5px;
+            text-align: center;
+            font-weight: $fw-bold;
+
+            &.transaction-completed {
+              background-color: $transaction-status-completed-color;
+            }
+            &.transaction-doing {
+              background-color: $transaction-status-doing-color;
+            }
+            &.transaction-open {
+              background-color: $transaction-status-open-color;
+            }
+            &.task-open {
+              background-color: $task-status-open-color;
+            }
+          }
+        }
+
+        & .task--name {
+          & .title {
+            margin-bottom: 0px;
+            font-size: 15px;
+          }
+          & .category {
+            color: $gray-text !important;
+            font-size: 10px;
+
+            :first-child {
+              font-weight: $fw-medium;
+            }
+          }
+        }
+
+        & .task--deadline {
+          display: inline-flex;
+          align-items: center;
+          word-break: break-word;
+
+          &.over-due {
+            @include breakpoint(768px) {
+              color: $red !important;
+              font-weight: 700;
+
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nodata-indication {
+    border-radius: 5px;
+    background-color: $upload-container-bg;
+    padding: 20px;
+    color: $text-color;
+    font-size: rem(14px);
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.button-open-transaction-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  margin-right: 10px;
+  cursor: pointer;
+
+  @include breakpoint(768px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  svg {
+    min-width: 12px;
+    min-height: 12px;
+  }
+}
+
+.button-star {
+  composes: button-open-transaction-modal;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  margin-right: 0;
+  margin-left: 10px;
+
+  @include breakpoint(768px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  svg {
+    min-width: 12px;
+    min-height: 12px;
+  }
+}
+
+.column-expand {
+  flex: 1;
+  width: 0;
+}

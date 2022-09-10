@@ -1,0 +1,219 @@
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/variables';
+// FIXME: Using global css instead
+
+$weekendColor: #e3e2d9;
+$calendarDayColor: #efefe9;
+$calendarTodayColor: #d5e3bd;
+
+.ssc-fullcalendar-container {
+  .task {
+    &--text {
+      color: $white !important;
+      &--title {
+        font-size: rem(12px);
+        font-weight: $fw-bold;
+        margin-left: 5px;
+      }
+      &--period {
+        font-size: rem(10px);
+        padding: 0px 7px;
+        border-radius: $task-calendar-border-radius;
+        font-weight: $fw-bold;
+      }
+    }
+
+    &--container {
+      display: flex;
+      align-items: center;
+      padding: 2px 5px;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+
+    &--open {
+      background-color: $transaction-status-open-color;
+
+      &:hover {
+        background-color: #db634d;
+      }
+
+      & .task--text--period {
+        background-color: #a72813;
+      }
+    }
+
+    &--todo {
+      background-color: $task-status-open-color;
+
+      &:hover {
+        background-color: #45b5c4;
+      }
+
+      & .task--text--period {
+        background-color: #337881;
+      }
+    }
+
+    &--completed {
+      background-color: $transaction-status-completed-color;
+
+      &:hover {
+        background-color: #a7a7a7;
+      }
+
+      & .task--text--period {
+        background-color: #5d5b5b;
+      }
+    }
+
+    &--doing {
+      background-color: $transaction-status-doing-color;
+
+      &:hover {
+        background-color: #35a748;
+      }
+
+      & .task--text--period {
+        background-color: #00652b;
+      }
+    }
+
+    &--daily {
+      gap: 5px;
+      padding: 0;
+
+      & .task--text {
+        color: $text-color !important;
+        margin: 0px;
+      }
+
+      & .heading--bullet {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+      }
+
+      & .heading--bullet.open--heading {
+        background-color: $transaction-status-open-color;
+
+        &:hover {
+          background-color: #db634d;
+        }
+      }
+
+      & .heading--bullet.todo--heading {
+        background-color: $task-status-open-color;
+
+        & .task--text--period {
+          background-color: #337881;
+        }
+      }
+
+      & .heading--bullet.doing--heading {
+        background-color: $transaction-status-doing-color;
+
+        &:hover {
+          background-color: #35a748;
+        }
+      }
+
+      & .heading--bullet.completed--heading {
+        background-color: $transaction-status-completed-color;
+
+        &:hover {
+          background-color: #a7a7a7;
+        }
+      }
+
+      &:hover {
+        .heading--bullet.open--heading {
+          background-color: #db634d;
+        }
+
+        .heading--bullet.todo--heading {
+          background-color: #337881;
+        }
+
+        .heading--bullet.doing--heading {
+          background-color: #35a748;
+        }
+
+        .heading--bullet.completed--heading {
+          background-color: #a7a7a7;
+        }
+      }
+    }
+  }
+
+  :global {
+    & table {
+      font-size: rem(12px);
+      & thead > tr {
+        & th:last-child,
+        th:nth-last-child(2) {
+          background-color: $weekendColor;
+        }
+      }
+
+      & tbody tr {
+        & td:last-child,
+        td:nth-last-child(2) {
+          background-color: $weekendColor;
+        }
+      }
+
+      & .fc-day {
+        background-color: $calendarDayColor;
+        border: 1px solid #bcbcbc;
+        & a {
+          color: $text-color;
+        }
+
+        & .fc-daygrid-day-top {
+          justify-content: left;
+        }
+
+        & .fc-col-header-cell-cushion {
+          line-height: 2.5;
+        }
+
+        // Events
+        & .fc-daygrid-day-events {
+          & a.fc-daygrid-event {
+            margin: 0px 5px;
+            padding-left: 2px;
+          }
+
+          & a.fc-event-start {
+            & :local(.task--doing),
+            :local(.task--todo),
+            :local(.task--completed) {
+              border-top-left-radius: $task-calendar-border-radius;
+              border-bottom-left-radius: $task-calendar-border-radius;
+            }
+          }
+
+          & a.fc-event-end {
+            & :local(.task--doing),
+            :local(.task--todo),
+            :local(.task--completed) {
+              border-top-right-radius: $task-calendar-border-radius;
+              border-bottom-right-radius: $task-calendar-border-radius;
+            }
+          }
+        }
+      }
+
+      & .fc-day-today {
+        background-color: $calendarTodayColor !important;
+      }
+    }
+
+    .fc-bg-event {
+      opacity: 1;
+      background-color: $weekendColor;
+    }
+  }
+}

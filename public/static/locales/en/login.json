@@ -1,0 +1,8 @@
+{
+  "title": "Login",
+  "username": "ID",
+  "password": "Password",
+  "placeholder_username": "foo@example.com",
+  "placeholder_password": "Input password",
+  "error_requried_field_max_65": "Please enter data in the text box [% item_name%] with a maximum length of 65 characters"
+}

@@ -1,0 +1,61 @@
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.task--calendar {
+  & .header {
+    display: flex;
+    align-items: center;
+  }
+
+  & .calendar-title {
+    font-size: rem(18px);
+
+    &:first-child {
+      margin-right: 15px !important;
+    }
+  }
+}
+
+.todo-list {
+  & .header--left {
+    display: flex;
+    align-items: center;
+  }
+
+  & .data-section {
+    & .title {
+      font-size: rem(18px);
+    }
+  }
+
+  :global {
+    .ant-collapse {
+      &-header {
+        padding: 0 !important;
+        padding-right: 24px !important;
+      }
+
+      &-content-box {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.mobile-padding {
+  @include breakpoint(768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.filter-checkbox__calendar {
+  margin-bottom: 16px;
+}
+
+.checkbox-show-favorite-tasks {
+  @include breakpoint(768px) {
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}

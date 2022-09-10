@@ -1,0 +1,23 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.title {
+  font-size: 24px !important;
+  margin-bottom: 25px !important;
+  margin-top: 10px !important;
+  color: $text-color !important;
+  line-height: 1.5 !important;
+  font-weight: $fw-bold !important;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+
+  @include breakpoint(768px) {
+    font-size: 20px !important;
+  }
+}
+
+.icon {
+  margin-right: 10px;
+  display: inline-flex;
+}

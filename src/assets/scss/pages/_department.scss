@@ -1,0 +1,240 @@
+@mixin tbody-field {
+  font-size: rem(16px);
+  font-weight: 700;
+  color: $text-color;
+  line-height: 19px;
+}
+
+@mixin edit-icon {
+  margin-left: 10px;
+  margin-bottom: -4px;
+  cursor: pointer;
+}
+
+.remove-button {
+  border: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.department-container {
+  .action-button {
+    color: $text-color !important;
+
+    &:disabled {
+      svg {
+        opacity: 0.8;
+        path,
+        rect {
+          stroke: $gray-text;
+        }
+      }
+    }
+  }
+
+  .department-table {
+    thead {
+      background-color: $table-header-bg;
+      & > tr > th {
+        background-color: $table-header-bg;
+        border-bottom: 0;
+        color: $table-header-color !important;
+
+        &:first-child {
+          border-top-left-radius: 5px !important;
+        }
+        &:last-child {
+          border-top-right-radius: 5px !important;
+        }
+      }
+    }
+
+    .thead-title {
+      font-size: 11px;
+      line-height: 13px;
+      font-weight: $fw-bold;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .tbody-field {
+      @include tbody-field;
+
+      .edit-icon {
+        @include edit-icon;
+      }
+    }
+
+    .ant-table-content {
+      overflow: auto;
+    }
+  }
+
+  .ant-typography {
+    .subtitle {
+      font-size: rem(16px);
+      color: $text-color;
+      font-weight: 400;
+    }
+  }
+
+  .card-body {
+    border-radius: 5px !important;
+    border: 0;
+
+    .section-upload {
+      .upload-title {
+        font-size: rem(16px);
+        font-weight: 700;
+        color: $text-color;
+      }
+
+      .upload-subtitle {
+        font-size: rem(14px);
+        color: $gray-text;
+        font-weight: 400;
+      }
+
+      .upload-description {
+        background-color: $upload-container-bg;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        color: $text-color !important;
+        font-size: rem(12px);
+
+        .ant-btn-round {
+          font-size: rem(12px);
+          color: $text-color !important;
+        }
+      }
+    }
+  }
+
+  .export-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &__text {
+      color: $text-color;
+      font-size: rem(14px);
+      font-weight: 400;
+      margin: 0 5px;
+    }
+
+    &__icon {
+      flex: 0 0 auto;
+    }
+  }
+
+  .section-action {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-top: 10px;
+  }
+
+  .back-text {
+    font-size: rem(12px);
+    color: $text-color;
+  }
+
+  .field-label {
+    font-size: rem(16px) !important;
+    color: $text-color !important;
+    font-weight: 550 !important;
+  }
+
+  .field-value {
+    font-size: rem(18px) !important;
+    color: $text-color !important;
+    font-weight: 300;
+  }
+
+  .button-drag {
+    cursor: grab;
+  }
+}
+
+.form-title {
+  font-size: rem(20px) !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  color: $text-color !important;
+}
+
+.form-label {
+  font-size: rem(16px) !important;
+  color: $text-color !important;
+  font-weight: 550 !important;
+  padding-top: calc(0.35rem + 1px);
+  padding-bottom: calc(0.35rem + 1px);
+  line-height: 1.5;
+}
+
+.preview-content {
+  background-color: $upload-container-bg;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: rem(18px);
+    color: $text-color;
+  }
+
+  .preview-value {
+    font-size: rem(18px);
+    color: $text-color;
+    font-weight: 600;
+  }
+}
+
+.department_list__row.ant-table-row.row-dragging {
+  background: $white;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+
+  & > td {
+    padding: 16px;
+  }
+
+  & > td:nth-child(2) {
+    flex: 1;
+    .tbody-field {
+      @include tbody-field;
+
+      .edit-icon {
+        @include edit-icon;
+      }
+    }
+  }
+
+  .button-drag {
+    pointer-events: auto !important;
+    cursor: grabbing !important;
+  }
+}
+
+.excel-modal-line {
+  display: flex;
+  align-items: baseline;
+
+  svg {
+    min-width: 8px;
+    min-height: 8px;
+  }
+}

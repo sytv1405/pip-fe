@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.005" height="21.005" viewBox="0 0 21.005 21.005">
+  <defs>
+    <path id="Path_462" data-name="Path 462" d="M0,0H21V21H0Z" transform="translate(0 0.001)" fill="#fff"/>
+  </defs>
+  <g id="Group_565" data-name="Group 565" transform="translate(0 0)">
+    <line id="Line_46" data-name="Line 46" x2="3.886" y2="3.886" transform="translate(16.12 16.12)" fill="#fff"/>
+    <g id="Group_564" data-name="Group 564">
+      <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(#clip-path)">
+        <line id="Line_47" data-name="Line 47" x2="3.886" y2="3.886" transform="translate(16.12 16.12)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_437" data-name="Path 437" d="M3.594,16.12a8.857,8.857,0,1,1,12.526,0,8.857,8.857,0,0,1-12.526,0" fill="#e3e2d9"/>
+        <path id="Path_438" data-name="Path 438" d="M3.594,16.12a8.857,8.857,0,1,1,12.526,0A8.857,8.857,0,0,1,3.594,16.12Z" fill="#fff" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_48" data-name="Line 48" x2="7.346" transform="translate(6.184 9.857)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_49" data-name="Line 49" y2="7.346" transform="translate(9.857 6.184)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

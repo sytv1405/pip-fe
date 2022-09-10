@@ -1,0 +1,123 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.editor {
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $border-color;
+  cursor: text;
+  border-radius: 5px;
+  position: relative;
+
+  :global {
+    .DraftEditor-root {
+      height: 165px;
+      overflow: auto;
+      padding: 14px 20px;
+
+      @include breakpoint(768px) {
+        font-size: 16px;
+      }
+
+      a {
+        color: $green;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      blockquote {
+        border-left: 5px solid $gray-light-100;
+        padding: 8px 16px;
+      }
+
+      ul,
+      ol {
+        padding: 0;
+      }
+
+      li {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    .public-DraftEditorPlaceholder-root {
+      display: none;
+      position: absolute;
+      color: $placeholder-color;
+
+      @include breakpoint(768px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.list-btn-comments {
+  margin-top: 20px;
+
+  @include breakpoint(768px) {
+    margin-top: 15px;
+  }
+
+  > button {
+    height: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    &:first-child {
+      margin-right: 10px !important;
+    }
+
+    @include breakpoint(768px) {
+      height: 35px !important;
+      width: 130px !important;
+    }
+  }
+}
+
+.mention-popover {
+  position: fixed;
+  margin-left: 10px;
+  min-width: 160px;
+  max-width: 260px;
+  padding: 12px 14px;
+  background-color: $white;
+  border: 1px solid $border-color-second;
+  border-radius: 5px;
+  z-index: 1;
+  color: $text-color;
+
+  &__title {
+    font-weight: $fw-bold;
+    color: $text-color;
+  }
+
+  &__body {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__label {
+    font-size: 12px;
+    min-width: 38px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 5px;
+    background-color: #d3d2c9;
+    margin-right: 6px;
+    padding: 2px 7px;
+    line-height: 18px;
+  }
+
+  &__deleted_message {
+    font-size: 12px;
+    color: $text-color;
+    margin-top: 8px;
+  }
+}

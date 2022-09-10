@@ -1,0 +1,191 @@
+@import '@/assets/scss/components/variables';
+
+.button-add {
+  position: relative;
+  width: 220px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  &:global(.ant-btn) {
+    border-radius: 5px !important;
+
+    svg {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      width: 12px;
+      height: 12px;
+      fill: $green;
+    }
+  }
+}
+
+.form-item-row {
+  flex-direction: row !important;
+
+  :global(.ant-form-item-label) {
+    padding: 5px 0;
+  }
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_area {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px dotted $border-color;
+
+    &:hover {
+      border-color: $green;
+    }
+  }
+
+
+  :global {
+    .ant-upload {
+      margin-top: 0 !important;
+    }
+
+    .ant-upload-list {
+      order: -1;
+
+      &-text-container {
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-item {
+        display: inline-flex;
+
+        &:hover {
+          .ant-upload-list-item-info {
+            background: transparent;
+          }
+        }
+
+        &-name {
+          color: $text-color;
+        }
+      }
+    }
+
+   .ant-upload-select {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .ant-upload-list-item-card-actions-btn {
+      opacity: 1;
+    }
+
+    .ant-upload-list-item-name {
+      text-decoration: underline;
+    }
+  }
+
+  &--notification {
+    :global {
+      .ant-upload {
+        &-list {
+          &-text-container {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.gray-card {
+  background-color: $gray-250;
+  margin-bottom: 15px;
+
+  :global {
+    .ant-card-body {
+      padding: 20px !important;
+    }
+  }
+}
+
+.narrow-field {
+  > * {
+    width: 300px;
+  }
+}
+
+.expanded-field {
+  > * {
+    width: 100%;
+  }
+}
+
+.label-task-code {
+  background-color: #d5e3bd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 5px 0;
+  padding: 2px 14px;
+  line-height: 18px;
+  min-width: 140px;
+  text-align: center;
+  font-size: 12px;
+  color: $text-color;
+}
+
+.button-small {
+  height: 30px;
+  line-height: 20px;
+}
+
+.button-inactivate-task {
+  svg {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+
+    path {
+      stroke: $green;
+    }
+  }
+}
+
+.inactivate-task {
+  &-subtitle {
+    font-size: 16px !important;
+    font-weight: $fw-bold;
+    color: $text-color;
+  }
+
+  &-description {
+    font-size: 16px;
+  }
+
+  &-notes {
+    padding: 14px 16px;
+    background-color: $gray-250;
+    border-radius: 5px;
+  }
+}
+
+.textarea-field {
+  :global(.ant-input) {
+    height: 115px;
+  }
+
+  &--small {
+    :global(.ant-input) {
+      height: 80px;
+    }
+  }
+}

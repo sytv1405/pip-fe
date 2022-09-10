@@ -1,0 +1,22 @@
+html {
+  body {
+    background-color: $bg-color;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    .ant-layout {
+      background-color: $bg-color;
+
+      &-footer {
+        background-color: $bg-color;
+        padding-top: 34px;
+        padding-bottom: 60px;
+        font-size: 12px;
+        color: $footer-color;
+
+        a {
+          color: currentColor;
+        }
+      }
+    }
+  }
+}

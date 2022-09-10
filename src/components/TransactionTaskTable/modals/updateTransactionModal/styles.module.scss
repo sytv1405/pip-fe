@@ -1,0 +1,184 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+@mixin field-label {
+  font-size: rem(16px) !important;
+  font-weight: $fw-bold !important;
+  line-height: 24px !important;
+  color: $text-color !important;
+}
+
+.transaction-modal {
+  :global {
+    .ant-modal-content {
+      border-radius: 6px;
+    }
+
+    .ant-modal-header {
+      padding: 20px 25px 0px !important;
+      background: transparent;
+
+      .ant-modal-title {
+        font-size: rem(20px) !important;
+        font-weight: $fw-bold !important;
+        line-height: 29px !important;
+        color: $text-color !important;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 0 25px 36px !important;
+
+      .ant-form-item-label {
+        @include field-label;
+      }
+
+      .ant-form-item {
+        margin-bottom: 10px !important;
+      }
+
+      .ant-form-item-control-input-content {
+        input,
+        select,
+        textarea {
+          font-size: rem(14px) !important;
+          color: $text-color !important;
+          line-height: 20px;
+        }
+
+        textarea {
+          height: 106px !important
+        }
+      }
+    }
+  }
+
+  .field-label {
+    @include field-label;
+  }
+
+  .completed-transaction {
+    @include field-label;
+
+    padding: 12px;
+    border-radius: 5px;
+    background-color: $upload-container-bg;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .transaction-infor {
+    border-radius: 5px;
+    background-color: $gray-250;
+    padding: 20px;
+    margin-bottom: 16px;
+
+    &__title {
+      border-radius: 5px;
+      background-color: $table-header-bg;
+      color: $text-color;
+      font-size: rem(12px);
+      line-height: 22px;
+      padding: 2px 20px;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: rem(14px);
+      line-height: 22px;
+      color: $text-color;
+      margin-left: 10px;
+    }
+  }
+
+  .description {
+    font-size: rem(14px) !important;
+    color: $text-color !important;
+    line-height: 24px;
+  }
+}
+
+.transaction-process {
+  padding: 14px;
+  background-color: $gray-250;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  &-order-no {
+    font-weight: bold;
+    color: #8d8d8d;
+    margin-right: 4px;
+  }
+}
+
+.transaction-status-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 26px;
+  padding: 0 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  color: $white;
+  border-radius: 5px 0 5px 0;
+  font-weight: $fw-normal;
+  line-height: 1;
+
+  &--doing {
+    background-color: $transaction-status-doing-color;
+  }
+
+  &--open {
+    background-color: $red;
+  }
+
+  &--completed {
+    background-color: $transaction-status-completed-color;
+  }
+
+  @include breakpoint(768px) {
+    min-width: unset;
+    padding: 9px 12px;
+  }
+}
+
+.textarea {
+  textarea {
+    height: 106px;
+  }
+}
+
+.header-button {
+  min-width: 120px;
+}
+
+.select {
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+  }
+}
+.status-group {
+  @include breakpoint(768px) {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.notification-label {
+  @include field-label;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: $upload-container-bg;
+  text-align: center;
+  margin-bottom: 20px;
+
+  & > span > strong {
+    font-weight: $fw-bold;
+  }
+}

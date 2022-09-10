@@ -1,0 +1,98 @@
+.ant-collapse {
+  $p: &;
+
+  & .ant-collapse-header {
+    & > svg {
+      right: 1px !important;
+    }
+  }
+
+  &--grey {
+    #{$p}-content-box {
+      background: #f0f2f5;
+    }
+  }
+
+  &--custom {
+    border: 1px solid $border-color !important;
+    border-radius: 5px !important;
+
+    & .anticon {
+      position: absolute;
+      right: 0;
+      top: 16px;
+
+      & > svg {
+        fill: $green;
+      }
+    }
+
+    & .ant-collapse-header {
+      font-weight: $fw-bold;
+
+      & > svg {
+        right: 16px !important;
+      }
+
+      @include breakpoint(768px) {
+        display: flex;
+        align-items: center;
+
+        & > div {
+          flex-grow: 1;
+        }
+
+        & > svg {
+          order: 1;
+          margin-right: 0 !important;
+        }
+      }
+    }
+
+    & .change-log__content {
+      flex-direction: column;
+      font-size: 12px;
+    }
+  }
+
+  &--comment {
+    .ant-collapse-header {
+      display: flex;
+      align-items: center;
+      font-weight: $fw-bold;
+      justify-content: center;
+      color: $text-color !important;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      flex-direction: row-reverse;
+
+      & > svg {
+        margin-left: 8px;
+
+        @include breakpoint(768px) {
+          order: 1;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    & .ant-collapse-content-box {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+
+    & .anticon {
+      position: absolute;
+      right: 0;
+      top: 16px;
+
+      & > svg {
+        fill: $green;
+      }
+    }
+
+    & .change-log__content {
+      flex-direction: column;
+    }
+  }
+}

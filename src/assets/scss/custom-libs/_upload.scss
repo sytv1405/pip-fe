@@ -1,0 +1,26 @@
+.ant-upload {
+  &-drag {
+    border-style: dotted !important;
+    border-width: 2px !important;
+    border-radius: 5px !important;
+    background: transparent !important;
+
+    &:hover {
+      border-color: $green !important;
+    }
+  }
+
+  &-title {
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: $fw-bold;
+    color: $text-color;
+    margin-bottom: 6px !important;
+  }
+
+  &-subtitle {
+    line-height: 22px;
+    font-size: 14px;
+    color: $gray-text;
+  }
+}

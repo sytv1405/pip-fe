@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29">
+  <g id="Rectangle_321" data-name="Rectangle 321" fill="#fff" stroke="#d9d9d9" stroke-width="1">
+    <rect width="30" height="29" rx="5" stroke="none"/>
+    <rect x="0.5" y="0.5" width="29" height="28" rx="4.5" fill="none"/>
+  </g>
+  <g id="Group_384" data-name="Group 384" transform="translate(-321 -592)">
+    <path id="Path_235" data-name="Path 235" d="M-2287.681,577.78h10.432" transform="translate(2618.465 24.209)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_236" data-name="Path 236" d="M-2283.8,578.144v-2.287h2.377v2.031" transform="translate(2618.596 23.56)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_237" data-name="Path 237" d="M-2287.385,579.782l.4,8.828h7.863l.456-8.828" transform="translate(2619.01 23.973)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_238" data-name="Path 238" d="M-2284.421,580v4.68" transform="translate(2619.069 25.279)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_239" data-name="Path 239" d="M-2284.421,580v4.68" transform="translate(2621.744 25.279)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

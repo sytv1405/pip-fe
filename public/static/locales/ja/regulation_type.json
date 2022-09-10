@@ -1,0 +1,21 @@
+{
+  "regulation_type_title": "規定種別設定",
+  "regulation_type_setting": "規定種別設定",
+  "regulation_type_sub": "規定マスタ画面で使われる、規定の種別を設定します。",
+  "regulation_type_name": "種別名",
+  "delete_label": "削除",
+  "add_regulation": "種別を追加",
+  "btn_register": "登録",
+  "warning_delete_title": "削除を確定する前に、削除対象をご確認ください。\n\n削除対象の業務ユニット\n業務ユニットレベル：{{businessType}}\n業務ユニット名：{{businessName}}",
+  "warning_delete_sub_1": "この種別に属する規定が存在するため削除ができません。\n種別を削除せず名称を変更することで対応できるかご検討ください。",
+  "warning_delete_sub_2": "または属する規定をすべて削除した上で種別を削除してください。",
+  "regulation_type_label": "規定種別名",
+  "update_regulation_complete": "規定種別を更新しました。",
+  "confirm_before_delete": "削除を確定する前に、削除対象をご確認ください。",
+  "type_need_delete": "削除対象の種別：",
+  "click_to_delete": "削除を実行する場合は「削除」ボタンをクリックしてください。",
+  "type_deleted": "以下の種別を削除しました。",
+  "order_message_success": "並び順を更新しました",
+  "modal_delete_title": "種別の削除",
+  "deleting_type": "削除対象の種別"
+}

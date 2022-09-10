@@ -1,0 +1,93 @@
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+@import '@/assets/scss/components/variables';
+
+.monthly-task {
+  &:not(:first-child) {
+    border-top: 1px solid $border-color;
+    padding-top: 30px;
+  }
+
+  .daily-task {
+    margin-bottom: 30px;
+  }
+
+  .month-title {
+    font-size: 24px;
+    color: $text-color;
+    font-weight: $fw-bold;
+    line-height: 36px;
+    margin-bottom: 10px;
+
+    @include breakpoint(768px) {
+      font-size: 18px;
+    }
+  }
+
+  .daily-title {
+    font-size: 18px;
+    color: $text-color;
+    font-weight: $fw-bold;
+    line-height: 27px;
+    margin-bottom: 10px;
+
+    @include breakpoint(768px) {
+      font-size: 15px;
+    }
+  }
+}
+
+.favorite-checkbox {
+  span:last-child {
+    padding-right: 0 !important;
+  }
+
+  :global {
+    .ant-checkbox-inner {
+      border-color: #bcbcbc;
+    }
+  }
+}
+
+.month-select-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+
+  :global {
+    label {
+      font-size: 14px !important;
+    }
+  }
+
+  .month-select {
+    min-width: 170px;
+
+    @include breakpoint(768px) {
+      :global {
+        .ant-select-selection-item {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+
+.mobile-padding {
+  @include breakpoint(768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.nodata-indication {
+  border-radius: 5px;
+  background-color: $upload-container-bg;
+  padding: 20px;
+  color: $text-color;
+  font-size: rem(14px);
+  line-height: 20px;
+  text-align: center;
+}

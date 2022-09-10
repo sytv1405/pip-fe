@@ -1,0 +1,287 @@
+@mixin amplify-authenticator-button-submit {
+  display: flex;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 99px;
+  font-size: 16px;
+  font-weight: bold !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin amplify-authenticator-button-extra($icon-url) {
+  font-size: $desktopBaseFontSize;
+  color: $text-color;
+  text-decoration: underline;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 8px;
+    height: 10px;
+    line-height: 10px;
+    margin-right: 8px;
+    background-image: url($icon-url);
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: $green;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.amplify-alert[data-variation='error'] {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 0px;
+  right: 0px;
+  padding: 17px;
+  z-index: 1000;
+  color: $white;
+  background-color: $red;
+  animation: fadeOut 3s ease-in-out forwards;
+
+  div[role='alert'] {
+    flex: unset !important;
+
+    .amplify-alert__body {
+      font-size: rem(20px);
+      font-weight: $fw-bold;
+    }
+  }
+
+  .amplify-icon {
+    min-width: 29px;
+    min-height: 29px;
+  }
+  svg {
+    min-width: 29px;
+    min-height: 29px;
+  }
+
+  .amplify-button {
+    display: none;
+  }
+}
+
+[data-amplify-authenticator] {
+  [data-amplify-container] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    @include breakpoint(500px) {
+      width: calc(100vw - 32px);
+    }
+  }
+
+  [data-amplify-router] {
+    flex: 1;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      background: $white;
+      border-radius: 5px;
+      width: 100%;
+      position: relative;
+      margin-top: 100px;
+    }
+  }
+
+  [data-amplify-form] {
+    padding-left: 85px;
+    padding-right: 85px;
+
+    @include breakpoint(500px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  .amplify-label {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: $fw-bold;
+  }
+
+  .amplify-input {
+    height: 38px;
+    border-color: $border-color;
+    color: $text-color;
+
+    @include breakpoint(768px) {
+      font-size: 16px;
+    }
+  }
+
+  .amplify-field-group__outer-end .amplify-field-group__control {
+    border-color: $border-color;
+  }
+
+  .authenticator-logo {
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 93px);
+  }
+
+  .authenticator-title {
+    font-weight: $fw-bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    color: $text-color;
+  }
+
+  .authenticator-footer {
+    font-size: 12px;
+    color: $footer-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .amplify-field__show-password {
+    padding: 0;
+    align-items: center;
+    width: 38px;
+    box-shadow: none;
+
+    .amplify-icon {
+      width: 20px !important;
+      height: 20px !important;
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+          fill: $icon-color;
+        }
+      }
+    }
+  }
+
+  [data-amplify-password],
+  [data-amplify-confirmpassword] {
+    border-right: 0;
+  }
+
+  [data-amplify-authenticator-signin] {
+    .amplify-button[type='submit'] {
+      @include amplify-authenticator-button-submit;
+      width: 180px;
+    }
+
+    & + [data-amplify-footer] {
+      margin-top: -20px;
+      padding-bottom: 60px;
+
+      .amplify-button[type='button'] {
+        @include amplify-authenticator-button-extra($icon-url: '/icon-right-green.svg');
+      }
+    }
+  }
+
+  [data-amplify-authenticator-resetpassword] {
+    .authenticator-title {
+      margin-bottom: 26px;
+      margin-top: 20px;
+    }
+
+    .amplify-button[type='submit'] {
+      @include amplify-authenticator-button-submit;
+      width: 200px;
+
+      & + .amplify-button[type='button'] {
+        @include amplify-authenticator-button-extra($icon-url: '/icon-left-green.svg');
+        margin-bottom: 20px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  [data-amplify-authenticator-confirmresetpassword] {
+    .authenticator-title {
+      margin-bottom: 26px;
+      margin-top: 20px;
+    }
+
+    .amplify-button[type='submit'] {
+      @include amplify-authenticator-button-submit;
+      width: 220px;
+
+      & + .amplify-button[type='button'] {
+        @include amplify-authenticator-button-extra($icon-url: '/icon-right-green.svg');
+        margin-bottom: 20px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  [data-amplify-authenticator-forcenewpassword] {
+    padding-top: 38px;
+
+    .amplify-button[type='submit'] {
+      @include amplify-authenticator-button-submit;
+      width: 220px;
+
+      & + .amplify-button[type='button'] {
+        @include amplify-authenticator-button-extra($icon-url: '/icon-left-green.svg');
+        margin-bottom: 20px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.amplify-text[data-variation='error'] {
+  color: $red;
+}
+
+.amplify-modal-reset-password-success {
+  .ant-modal-body {
+    font-size: 16px;
+  }
+}
+
+.amplify-flex,
+.amplify-field {
+  gap: unset;
+  grid-gap: unset;
+}
+
+.amplify-field {
+  margin-bottom: 20px;
+}
+
+.amplify-label {
+  line-height: 24px;
+  margin-bottom: 4px;
+}

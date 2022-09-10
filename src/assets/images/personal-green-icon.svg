@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_4368" data-name="Group 4368" transform="translate(-422 -284)">
+    <circle id="Ellipse_123" data-name="Ellipse 123" cx="13" cy="13" r="13" transform="translate(422 284)" fill="#efefe9"/>
+    <g id="Group_659" data-name="Group 659" transform="translate(429 290)">
+      <g id="Group_660" data-name="Group 660" transform="translate(0 0)">
+        <g id="Group_665" data-name="Group 665">
+          <rect id="Rectangle_719" data-name="Rectangle 719" width="10.263" height="12.129" transform="translate(0.681 0.681)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="Rectangle_720" data-name="Rectangle 720" width="3.052" height="2.537" transform="translate(4.286 10.273)" fill="none" stroke="#16962b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </g>
+      <line id="Line_217" data-name="Line 217" y2="1.815" transform="translate(3.532 3.267)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_218" data-name="Line 218" y2="1.815" transform="translate(5.812 3.267)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_219" data-name="Line 219" y2="1.815" transform="translate(8.093 3.267)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_220" data-name="Line 220" y2="1.815" transform="translate(3.532 6.291)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_221" data-name="Line 221" y2="1.815" transform="translate(5.812 6.291)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_222" data-name="Line 222" y2="1.815" transform="translate(8.093 6.291)" fill="none" stroke="#16962b" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

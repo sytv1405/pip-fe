@@ -1,0 +1,91 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+@mixin field-label {
+  font-size: rem(16px) !important;
+  font-weight: $fw-bold !important;
+  line-height: 24px !important;
+  color: $text-color !important;
+}
+
+.information-modal {
+  :global {
+    .ant-modal-header {
+      .ant-modal-title {
+        font-size: rem(20px) !important;
+        font-weight: $fw-bold !important;
+        line-height: 29px !important;
+        color: $text-color !important;
+      }
+    }
+    .ant-modal-body {
+      padding: 22px 25px 30px !important;
+    }
+  }
+  .task-title {
+    font-size: rem(20px) !important;
+    font-weight: $fw-bold !important;
+    line-height: 29px !important;
+    color: $text-color !important;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    border-radius: 5px;
+    background-color: $upload-container-bg;
+    padding: 12px 25px;
+    margin-bottom: 20px;
+
+    &__label,
+    &__text {
+      font-size: rem(16px) !important;
+      line-height: 24px !important;
+      color: $text-color !important;
+    }
+
+    &__label {
+      font-weight: $fw-bold !important;
+      margin-right: 13px;
+    }
+  }
+
+  .status-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    height: 26px;
+    padding: 0 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: rem(12px);
+    color: $white;
+    border-radius: 5px 0 5px 0;
+    font-weight: $fw-normal;
+    line-height: 1;
+
+    &--doing {
+      background-color: $transaction-status-doing-color;
+    }
+
+    &--open {
+      background-color: $transaction-status-open-color;
+    }
+
+    &--completed {
+      background-color: $transaction-status-completed-color;
+    }
+
+    &--todo {
+      background-color: $task-status-open-color;
+    }
+
+    @include breakpoint(768px) {
+      min-width: unset;
+      padding: 9px 12px;
+    }
+  }
+
+}

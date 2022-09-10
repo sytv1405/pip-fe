@@ -1,0 +1,214 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.comment-container {
+  margin-top: 40px;
+  scroll-margin: 100px;
+
+  & .comment-header {
+    margin-bottom: 25px;
+    margin-top: 0;
+
+    @include breakpoint(768px) {
+      margin: 12px 0 15px 16px;
+      align-items: center;
+    }
+
+    & > h3 {
+      margin-bottom: 0;
+    }
+
+    & > div {
+      margin-bottom: 0;
+      margin-left: 15px;
+      font-size: rem(16px);
+    }
+  }
+
+  & .comment-body {
+    & .list-comment {
+      scroll-margin: 100px;
+      border-bottom: 1px solid $border-color;
+      padding: 14px 0;
+
+      .list-comment-header {
+        min-height: 30px;
+      }
+
+      .user-comment {
+        font-size: 14px;
+        word-break: break-word;
+      }
+
+      .edited-comment-component {
+        @include breakpoint(768px) {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+
+      .created-time-comment,
+      .edited-comment {
+        font-size: 12px;
+        color: $placeholder-color !important;
+        margin: 0px;
+        font-weight: 500;
+      }
+
+      .created-time-comment {
+        white-space: nowrap;
+      }
+
+      .content-comment {
+        font-size: 14px;
+        color: $text-color !important;
+        font-weight: 400;
+        margin-bottom: 0;
+        padding-bottom: 8px;
+
+        a {
+          color: $green;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        blockquote {
+          border-left: 5px solid $gray-light-100;
+          padding: 8px 16px;
+        }
+
+        ul {
+          list-style-type: disc;
+        }
+
+        p {
+          margin-bottom: 0;
+          min-height: 22px;
+        }
+
+        :global(.mention) {
+          color: $green;
+        }
+      }
+    }
+
+    & .enter-comment {
+      margin-top: 20px;
+
+      & > h5 {
+        font-size: 14px;
+      }
+
+      & > textarea {
+        border: 1px solid $border-color;
+        border-radius: 5px;
+      }
+    }
+
+    & .collapse {
+      &-desktop {
+        @include breakpoint(768px) {
+          display: none;
+        }
+      }
+
+      &-mobile {
+        display: none;
+        @include breakpoint(768px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.deleted-message {
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $fw-medium;
+}
+
+.btn-reply-mobile {
+  min-width: 160px;
+}
+
+.create-comment-editor-wrapper {
+  @include breakpoint(768px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 14px;
+    background-color: $gray-250;
+    border: 1px solid $border-color;
+    border-radius: 5px 5px 0 0;
+
+    :global {
+      .DraftEditor-root {
+        height: auto;
+        max-height: 130px;
+      }
+    }
+  }
+}
+
+.no-comment-message {
+  padding: 16px;
+  color: $text-color;
+  line-height: 20px;
+  font-weight: $fw-bold;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  text-align: center;
+}
+
+.mention-popover {
+  position: fixed;
+  margin-left: 10px;
+  min-width: 160px;
+  max-width: 260px;
+  padding: 12px 14px;
+  background-color: $white;
+  border: 1px solid $border-color-second;
+  border-radius: 5px;
+  z-index: 1;
+  color: $text-color;
+
+  &__title {
+    font-weight: $fw-bold;
+    color: $text-color;
+  }
+
+  &__body {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__label {
+    font-size: 12px;
+    min-width: 38px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 5px;
+    background-color: #d3d2c9;
+    margin-right: 6px;
+    padding: 2px 7px;
+    line-height: 18px;
+  }
+
+  &__deleted_message {
+    font-size: 12px;
+    color: $text-color;
+    margin-top: 8px;
+  }
+}
+
+.title-edit-comment {
+  font-size: 14px !important;
+  margin-top: 4px;
+}

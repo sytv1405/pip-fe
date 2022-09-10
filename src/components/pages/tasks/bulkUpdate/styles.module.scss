@@ -1,0 +1,30 @@
+@import '@/assets/scss/components/variables';
+
+$bgSelectModal: #f7f7f7;
+
+.back-select-page {
+  padding: 0 !important;
+  margin-bottom: 26px !important;
+  color: $text-color !important;
+  font-size: 12px;
+
+  path {
+    fill: $green;
+  }
+}
+
+.text-title-table {
+  text-align: left !important;
+}
+
+.bulk-update-title {
+  font-size: 24px !important;
+}
+
+.text-task {
+  font-size: 13px !important;
+}
+
+.text-title-modal {
+  font-size: 16px !important;
+}

@@ -1,0 +1,51 @@
+@import '@/assets/scss/components/variables';
+
+$separator-color: #bcbcbc;
+$editor-icon-color: #6f6f6f;
+
+.buttonWrapper {
+  display: inline-flex;
+  align-items: center;
+
+  + .buttonWrapper {
+    &:before {
+      content: '';
+      width: 1px;
+      height: 12px;
+      background-color: $separator-color;
+    }
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  font-size: 18px;
+  border: 0;
+  vertical-align: bottom;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  svg {
+    fill: $editor-icon-color;
+  }
+
+  &:hover {
+    color: $green;
+
+    svg {
+      fill: $green;
+    }
+  }
+}
+
+.active {
+  color: $green;
+
+  svg {
+    fill: $green;
+  }
+}

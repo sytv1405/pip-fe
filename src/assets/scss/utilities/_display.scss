@@ -1,0 +1,33 @@
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.hide-for-mobile {
+  @include breakpoint(768px) {
+    display: none !important;
+  }
+}
+
+.d-block-for-mobile {
+  display: none !important;
+
+  @include breakpoint(768px) {
+    display: block !important;
+  }
+}
+
+.d-flex-for-mobile {
+  display: none !important;
+
+  @include breakpoint(768px) {
+    display: flex !important;
+  }
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}

@@ -1,0 +1,134 @@
+.border-input {
+  .ant-input {
+    border-radius: 5px !important;
+  }
+
+  &.ant-form-item-has-error {
+    .ant-input {
+      &:focus,
+      &:hover {
+        border-color: $danger !important;
+      }
+    }
+
+    .ant-form-item-explain-error,
+    .color-red {
+      font-size: rem(12px) !important;
+    }
+  }
+}
+
+.ant-input {
+  color: $text-color !important;
+
+  @include breakpoint(768px) {
+    font-size: 16px !important;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $green !important;
+    box-shadow: none !important;
+  }
+
+  &-lg {
+    height: 38px !important;
+    font-size: rem(14px) !important;
+
+    @include breakpoint(768px) {
+      font-size: 16px !important;
+    }
+  }
+
+  &:disabled {
+    color: $disabled-color !important;
+    background-color: $disabled-bg !important;
+
+    &:focus,
+    &:hover {
+      border-color: $border-color !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: inset 0 0 0px 1000px $white !important;
+    
+    &:focus {
+      box-shadow: inset 0 0 0px 1000px $white !important;
+    }
+  }
+}
+
+.ant-input-affix-wrapper {
+  &:focus,
+  &:hover,
+  &-focused {
+    border-color: $green !important;
+    box-shadow: none !important;
+  }
+
+  border-radius: 5px !important;
+
+  > .ant-input {
+    &:-internal-autofill-selected {
+      box-shadow: inset 0 0 0px 1000px $white !important;
+      
+      &:focus {
+        box-shadow: inset 0 0 0px 1000px $white !important;
+      }
+    }
+  }
+}
+
+// Input.Search
+.ant-input-group-wrapper {
+  &.ant-input-search {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 1px;
+    &:focus,
+    &:hover {
+      border-color: $green !important;
+    }
+
+    & .ant-input {
+      border-color: transparent !important;
+      background-color: transparent !important;
+      &:hover {
+        border-color: transparent !important;
+      }
+    }
+
+    & .ant-btn {
+      border-color: transparent !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+      &:hover {
+        border-color: transparent !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .ant-input-group-addon {
+    background: transparent !important;
+  }
+}
+
+.ant-input-number {
+  border-radius: 5px !important;
+
+  &-lg {
+    height: 38px !important;
+    font-size: 14px !important;
+    
+    @include breakpoint(768px) {
+      font-size: 16px !important;
+    }
+  }
+
+  &-input {
+    color: $text-color;
+  }
+}

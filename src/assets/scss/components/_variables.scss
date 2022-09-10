@@ -1,0 +1,88 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #f6f6f7;
+$gray-250: #f7f7f7;
+$gray-300: #e2e7f1;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #4b4b5a;
+$gray-800: #343a40;
+$gray-900: #212529;
+$gray-light-100: #cfcfcf;
+$gray-light-200: #ebebeb;
+$black: #000;
+$gray-bg: #f6f6f6;
+
+$blue: #1890ff;
+$indigo: #564ab1;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #c74a33;
+$orange: #f77e53;
+$yellow: #050403;
+$green: #16962b;
+$teal: #1ce1ac;
+$cyan: #25c2e3;
+
+$primary: $blue;
+$border-color: #d9d9d9;
+$border-color-second: #d0d0d0;
+$border-table-color: #dfdfdf;
+$text-color: #333333;
+$table-header-bg: #e3e2d9;
+$table-header-color: #6f6f6f;
+$table-row-hover-bg: #fafafa;
+$bg-color: #f7f6de;
+$bg-search: #f7f7f7;
+$gray-text: #777777;
+$upload-container-bg: #efefe9;
+$notification-bg: #eaeaea;
+$placeholder-color: #8d8d8d;
+$disabled-color: #8d8d8d;
+$disabled-bg: #f7f7f7;
+$icon-color: #8d8d8d;
+$menu-icon-color: $icon-color;
+$submenu-active-bg: #d5e3bd;
+$menu-switch-mode-bg: #027916;
+$option-group-color: #9d9d9d;
+
+$task-calendar-border-radius: 20px;
+$transaction-status-open-color: #c74a33;
+$transaction-status-completed-color: #8d8d8d;
+$transaction-status-doing-color: #16962b;
+$task-status-open-color: #2ba1b1;
+
+$desktopBaseFontSize: 14px;
+$mobileBaseFontSize: 12px;
+$modal-close-color: #8d8d8d;
+$modal-close-border-color: #bcbcbc;
+$footer-color: #8d8d8d;
+$danger: #ff4d4f;
+$scroll-color: #bababa;
+
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);

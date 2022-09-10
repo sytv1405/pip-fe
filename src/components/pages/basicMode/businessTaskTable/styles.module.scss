@@ -1,0 +1,175 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/px-to-rem';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.ssc--business-task {
+  :global {
+    .ssc-table {
+      .ant-table-thead {
+        tr:first-child {
+          th {
+            &:first-child {
+              padding-left: 20px !important;
+              width: 110px;
+
+              @include breakpoint(768px) {
+                width: unset;
+                padding-left: 14px !important;
+              }
+            }
+
+            &:nth-child(2) {
+              width: 200px;
+
+              @include breakpoint(768px) {
+                width: 65px;
+              }
+            }
+
+            &:nth-child(4) {
+              width: 164px;
+            }
+
+            &:not(:first-child) {
+              padding-left: 8px !important;
+            }
+
+            &:not(:last-child) {
+              padding-right: 8px !important;
+            }
+
+            &:last-child {
+              padding-right: 20px !important;
+
+              @include breakpoint(768px) {
+                width: 56px !important;
+                padding-left: 0 !important;
+                padding-right: 14px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .ant-table-tbody {
+        & > tr > td {
+          font-size: rem(12px);
+          border-bottom: 2px solid $white !important;
+          word-break: break-word;
+          padding-top: 14px !important;
+          padding-bottom: 14px !important;
+
+          @include breakpoint(768px) {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+
+          &:first-child {
+            padding-left: 20px !important;
+
+            @include breakpoint(768px) {
+              padding-left: 14px !important;
+            }
+          }
+
+          &:not(:first-child) {
+            padding-left: 8px !important;
+          }
+
+          &:not(:last-child) {
+            padding-right: 8px !important;
+          }
+
+          &:last-child {
+            padding-right: 20px !important;
+
+            @include breakpoint(768px) {
+              padding-left: 0 !important;
+              padding-right: 14px !important;
+            }
+          }
+        }
+
+        .task-no {
+          font-size: 14px;
+        }
+
+        & .category {
+          color: $gray-text !important;
+          font-size: rem(10px);
+        }
+
+        & .task--name {
+          & .title {
+            margin-bottom: 0px;
+            font-size: 13px;
+          }
+          & .category {
+            color: $gray-text !important;
+            font-size: 10px;
+            display: none;
+
+            @include breakpoint(768px) {
+              display: block;
+            }
+          }
+        }
+
+        & .task--deadline {
+          display: inline-flex;
+          align-items: center;
+          word-break: break-word;
+
+          &.over-due {
+            @include breakpoint(768px) {
+              color: $red !important;
+              font-weight: 700;
+
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nodata-indication {
+    border-radius: 5px;
+    background-color: $upload-container-bg;
+    padding: 20px;
+    color: $text-color;
+    font-size: rem(14px);
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.column-expand {
+  flex: 1;
+  width: 0;
+}
+
+.button-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  margin-left: 10px;
+  cursor: pointer;
+
+  @include breakpoint(768px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  svg {
+    min-width: 12px;
+    min-height: 12px;
+  }
+}

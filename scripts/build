@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "$DEPLOYMENT_GROUP_NAME"
+ENV="dev"
+if [ "$DEPLOYMENT_GROUP_NAME" = "handover-api-deployment_group-prd" ]
+then
+    ENV="prd"
+fi
+
+echo "handoff-fe処理開始"
+cd /var/www/html/handoff-fe
+aws ssm get-parameter --with-decryption --name '/handover/'$ENV'/frontend/env_file' --region us-east-2 --query Parameter.Value | sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\//g' > .env
+pm2 stop "handoff-fe-$ENV"
+pm2 delete "handoff-fe-$ENV"
+pm2 start yarn --name "handoff-fe-$ENV" --interpreter bash -- start -p 3000

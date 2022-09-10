@@ -1,0 +1,27 @@
+@import '@/assets/scss/components/variables';
+@import '@/assets/scss/components/mixins/breakpoint';
+
+.input {
+  width: 100%;
+  max-width: 400px;
+  border-bottom-right-radius: 5px;
+  
+  @include breakpoint(768px) {
+    font-size: 16px;
+    height: 38px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $green;
+  }
+
+  &:placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.link {
+  color: $green;
+}
